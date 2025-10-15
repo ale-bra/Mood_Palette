@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mood Palette</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div>
+        <h2>Mood Palette Extractor</h2>
+        <p>Extract colors from images and analyze their harmony, relationships, and characteristics.</p>
+      </div>
+
+      <div class="controls">
+        <div class="file-input-wrapper">
+          <input type="file" id="imageUpload" accept="image/*" />
+          <label for="imageUpload" class="file-input-label">Choose Image</label>
+        </div>
+        <button class="btn" id="extractColors">Extract Palette</button>
+      </div>
+
+      <div class="section" id="paletteSection" style="display:none;">
+        <h3>Color Palette</h3>
+        <div class="palette" id="paletteArea"></div>
+      </div>
+
+      <div class="section" id="analysisSection" style="display:none;">
+        <h3>Palette Analysis</h3>
+        <div class="analysis" id="analysisArea"></div>
+      </div>
+
+      <div class="section" id="harmonySection" style="display:none;">
+        <h3>Color Harmony</h3>
+        <canvas class="harmony-canvas" id="harmonyCanvas"></canvas>
+      </div>
+
+      <div class="section" id="exportSection" style="display:none;">
+        <h3>Export</h3>
+        <div class="export-buttons">
+          <button class="btn secondary" id="exportCSS">CSS</button>
+          <button class="btn secondary" id="exportJSON">JSON</button>
+        </div>
+      </div>
+
+      <button class="btn secondary" id="reset">Reset</button>
+    </div>
+
+    <div class="preview" id="previewArea">
+      <img id="imagePreview" src="" alt="Image Preview" style="display:none;" />
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
